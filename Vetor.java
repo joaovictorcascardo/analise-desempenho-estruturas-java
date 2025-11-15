@@ -21,4 +21,14 @@ public class Vetor {
             System.out.println(vetor[i]);
         }
     }
+
+    public int buscaSequencial(int numero) {
+        for (int i = 0; i < tamanhoAtualDoVetor; i++) {
+            int ElementoAtual = vetor[i];
+            if (numero == ElementoAtual) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

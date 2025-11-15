@@ -4,5 +4,7 @@ public class Main {
         novoVetor.insere(10);
         novoVetor.insere(10);
         novoVetor.imprime();
+        int indiceEncontrado = novoVetor.buscaSequencial(10);
+        System.out.println("Elemento encontrado no índice: " + indiceEncontrado);
     }
 }
