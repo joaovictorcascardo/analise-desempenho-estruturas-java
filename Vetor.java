@@ -31,4 +31,16 @@ public class Vetor {
         }
         return -1;
     }
+
+    public void bubbleSort() {
+        for (int i = 0; i < tamanhoAtualDoVetor - 1; i++) {
+            for (int j = 0; j < tamanhoAtualDoVetor - 1 - i; j++) {
+                if (vetor[j] > vetor[j + 1]) {
+                    int temp = vetor[j];
+                    vetor[j] = vetor[j + 1];
+                    vetor[j + 1] = temp;
+                }
+            }
+        }
+    }
 }
