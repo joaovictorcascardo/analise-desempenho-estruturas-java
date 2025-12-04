@@ -85,4 +85,22 @@ public class Vetor {
         this.vetor[j] = temp;
     }
 
+    public int buscaBinaria(int numero) {
+        int inicio = 0;
+        int fim = tamanhoAtualDoVetor - 1;
+
+        while (inicio <= fim) {
+            int meio = inicio + (fim - inicio) / 2;
+
+            if (vetor[meio] == numero) {
+                return meio;
+            }
+            if (vetor[meio] < numero) {
+                inicio = meio + 1;
+            } else {
+                fim = meio - 1;
+            }
+        }
+        return -1;
+    }
 }
