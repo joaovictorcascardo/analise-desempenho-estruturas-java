@@ -52,8 +52,8 @@ public class Vetor {
         if (inicio < fim) {
             int indicePivo = particionar(inicio, fim);
 
-            ordenarQuickSort(inicio, indicePivo);
-            ordenarQuickSort(indicePivo + 1, fim);
+            ordenarQuickSort(inicio, indicePivo - 1);
+            ordenarQuickSort(indicePivo, fim);
         }
     }
 
@@ -76,7 +76,7 @@ public class Vetor {
                 direita--;
             }
         }
-        return direita;
+        return esquerda;
     }
 
     private void trocar(int i, int j) {
