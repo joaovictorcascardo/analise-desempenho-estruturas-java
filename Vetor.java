@@ -43,4 +43,46 @@ public class Vetor {
             }
         }
     }
+
+    public void quickSort() {
+        ordenarQuickSort(0, this.tamanhoAtualDoVetor - 1);
+    }
+
+    private void ordenarQuickSort(int inicio, int fim) {
+        if (inicio < fim) {
+            int indicePivo = particionar(inicio, fim);
+
+            ordenarQuickSort(inicio, indicePivo);
+            ordenarQuickSort(indicePivo + 1, fim);
+        }
+    }
+
+    private int particionar(int inicio, int fim) {
+        int pivo = this.vetor[(inicio + fim) / 2];
+        int esquerda = inicio;
+        int direita = fim;
+
+        while (esquerda <= direita) {
+            while (this.vetor[esquerda] < pivo) {
+                esquerda++;
+            }
+            while (this.vetor[direita] > pivo) {
+                direita--;
+            }
+
+            if (esquerda <= direita) {
+                trocar(esquerda, direita);
+                esquerda++;
+                direita--;
+            }
+        }
+        return direita;
+    }
+
+    private void trocar(int i, int j) {
+        int temp = this.vetor[i];
+        this.vetor[i] = this.vetor[j];
+        this.vetor[j] = temp;
+    }
+
 }
