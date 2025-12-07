@@ -18,5 +18,15 @@ public class Main {
         analiseArvore.executarTesteParaTamanho(100);
         analiseArvore.executarTesteParaTamanho(1000);
         analiseArvore.executarTesteParaTamanho(10000);
+
+        System.out.println("\n\n");
+        System.out.println("##################################################");
+        System.out.println("            INICIANDO BATERIA: ARVORE AVL");
+        System.out.println("##################################################");
+
+        AnaliseAVL analiseAVL = new AnaliseAVL();
+        analiseAVL.executarTesteParaTamanho(100);
+        analiseAVL.executarTesteParaTamanho(1000);
+        analiseAVL.executarTesteParaTamanho(10000);
     }
 }
