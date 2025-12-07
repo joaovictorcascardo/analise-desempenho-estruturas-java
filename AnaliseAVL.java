@@ -1,3 +1,5 @@
+import Estruturas.EstruturaArvoreAVL.ArvoreAVL;
+
 public class AnaliseAVL {
 
     public void executarTesteParaTamanho(int tamanho) {

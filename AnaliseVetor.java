@@ -1,3 +1,5 @@
+import Estruturas.EstruturaVetor.Vetor;
+
 public class AnaliseVetor {
 
     public void executarTesteParaTamanho(int tamanho) {

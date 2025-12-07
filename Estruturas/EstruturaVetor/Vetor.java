@@ -1,3 +1,5 @@
+package Estruturas.EstruturaVetor;
+
 public class Vetor {
     private int[] vetor;
     private int tamanhoAtualDoVetor;

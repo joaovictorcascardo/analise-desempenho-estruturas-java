@@ -1,3 +1,5 @@
+import Estruturas.EstruturaArvoreDeBuscaBinaria.ArvoreBinariaBusca;
+
 public class AnaliseArvoreBinaria {
 
     public void executarTesteParaTamanho(int tamanho) {

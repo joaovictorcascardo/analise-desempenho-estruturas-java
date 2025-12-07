@@ -1,3 +1,4 @@
+package Estruturas.EstruturaArvoreAVL;
 
 public class ArvoreAVL {
 
