@@ -25,12 +25,15 @@ public class AnaliseArvoreBinaria {
             } else {
                 dados = GeradorDados.gerarAleatorio(tamanho);
             }
+
             ArvoreBinariaBusca arvore = new ArvoreBinariaBusca();
+
             long inicio = System.nanoTime();
             for (int val : dados) {
                 arvore.insere(val);
             }
             somaInsercao += (System.nanoTime() - inicio);
+
             somaBusca += medirBuscas(arvore, dados);
         }
 
@@ -42,10 +45,17 @@ public class AnaliseArvoreBinaria {
 
     private long medirBuscas(ArvoreBinariaBusca arvore, int[] dadosOriginais) {
         long inicio = System.nanoTime();
+
         int n = dadosOriginais.length;
+
         arvore.busca(dadosOriginais[0]);
         arvore.busca(dadosOriginais[n - 1]);
         arvore.busca(dadosOriginais[n / 2]);
+
+        arvore.busca(dadosOriginais[(n * 2) / 10]);
+        arvore.busca(dadosOriginais[(n * 6) / 10]);
+        arvore.busca(dadosOriginais[(n * 8) / 10]);
+
         arvore.busca(-12345);
 
         return System.nanoTime() - inicio;

@@ -40,7 +40,6 @@ public class AnaliseVetor {
 
             Vetor vBinaria = clonarVetor(tamanho, dados);
             vBinaria.quickSort();
-
             somaBuscaBin += medirBuscas(vBinaria, dados, true);
 
             Vetor vBubble = clonarVetor(tamanho, dados);
@@ -67,20 +66,29 @@ public class AnaliseVetor {
         long inicio = System.nanoTime();
 
         int n = dadosOriginais.length;
-        int primeiro = dadosOriginais[0];
-        int ultimo = dadosOriginais[n - 1];
-        int meio = dadosOriginais[n / 2];
+        int p1 = dadosOriginais[0];
+        int p2 = dadosOriginais[n - 1];
+        int p3 = dadosOriginais[n / 2];
+        int aleat1 = dadosOriginais[(n * 2) / 10];
+        int aleat2 = dadosOriginais[(n * 6) / 10];
+        int aleat3 = dadosOriginais[(n * 8) / 10];
         int inexistente = -12345;
 
         if (ehBinaria) {
-            vetor.buscaBinaria(primeiro);
-            vetor.buscaBinaria(ultimo);
-            vetor.buscaBinaria(meio);
+            vetor.buscaBinaria(p1);
+            vetor.buscaBinaria(p2);
+            vetor.buscaBinaria(p3);
+            vetor.buscaBinaria(aleat1);
+            vetor.buscaBinaria(aleat2);
+            vetor.buscaBinaria(aleat3);
             vetor.buscaBinaria(inexistente);
         } else {
-            vetor.buscaSequencial(primeiro);
-            vetor.buscaSequencial(ultimo);
-            vetor.buscaSequencial(meio);
+            vetor.buscaSequencial(p1);
+            vetor.buscaSequencial(p2);
+            vetor.buscaSequencial(p3);
+            vetor.buscaSequencial(aleat1);
+            vetor.buscaSequencial(aleat2);
+            vetor.buscaSequencial(aleat3);
             vetor.buscaSequencial(inexistente);
         }
 

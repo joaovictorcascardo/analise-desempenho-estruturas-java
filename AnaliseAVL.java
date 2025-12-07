@@ -1,4 +1,3 @@
-
 public class AnaliseAVL {
 
     public void executarTesteParaTamanho(int tamanho) {
@@ -34,6 +33,7 @@ public class AnaliseAVL {
                 avl.insere(val);
             }
             somaInsercao += (System.nanoTime() - inicio);
+
             somaBusca += medirBuscas(avl, dados);
         }
 
@@ -46,9 +46,15 @@ public class AnaliseAVL {
     private long medirBuscas(ArvoreAVL avl, int[] dadosOriginais) {
         long inicio = System.nanoTime();
         int n = dadosOriginais.length;
+
         avl.busca(dadosOriginais[0]);
         avl.busca(dadosOriginais[n - 1]);
         avl.busca(dadosOriginais[n / 2]);
+
+        avl.busca(dadosOriginais[(n * 2) / 10]);
+        avl.busca(dadosOriginais[(n * 6) / 10]);
+        avl.busca(dadosOriginais[(n * 8) / 10]);
+
         avl.busca(-12345);
 
         return System.nanoTime() - inicio;
