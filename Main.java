@@ -1,11 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        AnaliseVetor analisador = new AnaliseVetor();
+        System.out.println("##################################################");
+        System.out.println("              INICIANDO BATERIA: VETORES");
+        System.out.println("##################################################");
 
-        analisador.executarTesteParaTamanho(100);
+        AnaliseVetor analiseVetor = new AnaliseVetor();
+        analiseVetor.executarTesteParaTamanho(100);
+        analiseVetor.executarTesteParaTamanho(1000);
+        analiseVetor.executarTesteParaTamanho(10000);
 
-        analisador.executarTesteParaTamanho(1000);
+        System.out.println("\n\n");
+        System.out.println("##################################################");
+        System.out.println("          INICIANDO BATERIA: ARVORE BINARIA");
+        System.out.println("##################################################");
 
-        analisador.executarTesteParaTamanho(10000);
+        AnaliseArvoreBinaria analiseArvore = new AnaliseArvoreBinaria();
+        analiseArvore.executarTesteParaTamanho(100);
+        analiseArvore.executarTesteParaTamanho(1000);
+        analiseArvore.executarTesteParaTamanho(10000);
     }
 }
